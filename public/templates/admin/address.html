@@ -1,0 +1,21 @@
+<div ng-controller="AddressController">
+    <div>
+        <div class="form-group form-inline">
+            <select class="form-control" ng-model="selectedAddress" ng-options="address.addressID as address.name for address in addresslist" ng-change="onchange(selectedAddress)">
+            </select>
+            <button class="btn btn-success" type="button" ng-click="toggleNewAddress()">Add New Address</button>
+        </div>
+        <div class="form-group" ng-show="!isEditing">
+            <label></label>
+        </div>
+        <div ng-show="isEditing">
+            <div class="form-group" ng-repeat="control in inputControls">
+                <label for="{{control.id}}" }>{{control.label}}</label>
+                <input type="text" class='form-control' id="{{control.id}}" placeholder="{{control.label}}" ng-model="inputControls[$index].model">
+            </div>
+            <div style="float:right">
+                <button type="button" class="btn btn-primary" ng-click="addNewAddress()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

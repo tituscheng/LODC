@@ -1,0 +1,49 @@
+<div ng-controller="PageController">
+    <div class="form-group form-inline">
+
+        <div>
+            <label for="exampleInputName2">Navigation Menu</label>
+            <br>
+            <div ng-show="isAddingNewPage" class="form-group form-inline">
+                <input type="text" class="form-control" placeholder="Page Name" ng-model="newPageName">
+                <input type="text" class="form-control" placeholder="Korean Version" ng-model="newKrVersion">
+                <input type="text" class="form-control" placeholder="English Version" ng-model="newEnVersion">
+                <button type="button" class="btn btn-success" ng-click="save()">Save</button>
+                <button type="button" class="btn btn-default" ng-click="cancel()">Cancel</button>
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <td ng-show="isEditing"></td>
+                    <td ng-repeat="title in tableTitle"><b>{{title}}</b></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="page in pages | orderBy:'order'" ng-click="selectPage($index)">
+                    <td ng-show="isEditing">
+                        <button type="button" class="btn btn-danger" aria-label="Center Align" ng-click="remove(page.pageID)">
+                            <span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span> Remove
+                        </button>
+                    </td>
+                    <td>{{page.pageName}}</td>
+                    <td>
+                        {{page.lang.kr}}
+                    </td>
+                    <td>
+                        {{page.lang.en}}
+                    </td>
+                    <td>
+                        {{page.link}}
+                    </td>
+                    <td>
+                        {{page.order}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</div>

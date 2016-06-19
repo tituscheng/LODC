@@ -1,0 +1,50 @@
+<div ng-controller="SermonUpdateController">
+    <div class="">
+        <div class="form-inline">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" ng-model="lang" id="optionsRadios1" value="en" checked> English
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" ng-model="lang" id="optionsRadios2" value="kr"> 한국어
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="sermontitle">{{fields.title[lang]}}</label>
+            <br>
+            <input type="text" class="form-control" ng-model="sermonformdata.title[lang]">
+        </div>
+        <div class="form-group">
+            <label for="sermonspeaker">{{fields.speaker[lang]}}</label>
+            <br>
+            <input type="text" class="form-control" ng-model="sermonformdata.speaker[lang]">
+        </div>
+    </div>
+    <div class="form-group">
+        <label>{{fields.passage[lang]}}</label>
+        <input type="text" class="form-control" ng-model="sermonformdata.passages[lang]">
+    </div>
+    <div class="form-group">
+        <label>{{fields.description[lang]}}</label>
+        <textarea class="form-control" rows="3" ng-model="sermonformdata.description[lang]"></textarea>
+    </div>
+    <div class="form-group form-inline">
+        <label>{{fields.date[lang]}}</label>
+        <br>
+        <input type="text" class="form-control" ng-model="sermonformdata.date.sermonDate">
+        <button type="button" class="btn btn-default" ng-click="getDate()">{{fields.dateButtonText[lang]}}</button>
+    </div>
+    <div class="form-group">
+        <label>{{fields.link[lang]}}</label>
+        <br>
+        <input type="text" class="form-control" placeholder="https://www.youtube.com/watch?v=ghJYCdhVix0" ng-model="sermonformdata.link">
+
+    </div>
+
+    <button type="button" class="btn btn-success" ng-click="updateSermon()">Update Sermon</button>
+    <button type="button" class="btn btn-alert" ng-click="delete()">Delete Sermon</button>
+
+</div>

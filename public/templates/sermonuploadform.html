@@ -1,0 +1,67 @@
+<div ng-show="selectedView == 11">
+    <div class="form-group">
+        <label form="sermonInputSeries">Sermon Series</label>
+        <div class="form-inline">
+            <select class="form-control" ng-model="data.sid" ng-options="series.title for series in seriesTitles">
+                <!--                <option ng-repeat="series in seriesTitles" value="{{series.id}}">{{series.title}}</option>-->
+            </select>
+        </div>
+    </div>
+    <div ng-class="inputClasses[1]">
+        <label form="sermonInputTitle">Sermon Title</label>
+        <input type="text" class='form-control' id="sermonInputTitle" placeholder="Title" ng-model="data.title">
+        <!--        <span class="ng-class:iconStatus[1]; glyphicon form-control-feedback" aria-hidden="true"></span>-->
+    </div>
+    <div class="form-group">
+        <label for="sermonInputDescription">Description (Optional)</label>
+        <textarea class="form-control" rows="2" id="sermonInputDescription" placeholder="Write a brief description of the sermon here" ng-model="data.description"></textarea>
+    </div>
+    <div class="form-group">
+        <label form="sermonInputDate">Date of Sermon</label>
+        <div class="form-inline">
+            <input type="text" class="form-control" placeholder="Date" ng-model="data.date">
+            <button type="button" class="btn btn-default" ng-click="getDateNow()">Today's Date</button>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label form="sermonInputDate">Keywords (Optional)</label>
+        <input type="text" class="form-control" id="sermonInputKeywords" placeholder="Keywords" ng-model="data.keywords">
+    </div>
+    <div class="form-group">
+        <label>Available Languages (subtitle, transcript, powerpoint...)</label>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" ng-model="languages.lang1"> English
+            </label>
+            <label>
+                <input type="checkbox" ng-model="languages.lang2"> Korean
+            </label>
+        </div>
+    </div>
+
+    <div class="form-group" ng-controller="MediaOptionController">
+        <label>Options</label>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" id="urlMediaOption" value="media" ng-click="optionChanged()" ng-model="option"> Media URL
+            </label>
+            <label>
+                <input type="radio" name="optionsRadios" id="urlMediaOption" value="file" ng-click="optionChanged()" ng-model="option"> File link
+            </label>
+        </div>
+
+        <div class="form-group" ng-show="option == 'file'">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" id="exampleInputFile">
+            <p class="help-block">This is the place to upload the sermon file</p>
+        </div>
+        <div class="form-group" ng-show="option == 'media'">
+            <label for="mediaInputLink">Media Link</label>
+            <input type="text" class="form-control" id="mediaInputLink" ng-model="data.url">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="button" ng-click="uploadSermon()" class="btn btn-active">Upload sermon</button>
+    </div>
+</div>

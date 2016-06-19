@@ -1,0 +1,32 @@
+<div ng-controller="SermonController">
+    This is the page for viewing sermon
+
+    <div class="row" align="right">
+        <div>
+            <button type="button" class="btn btn-active">Edit</button>
+            <a href="#/sermonupload" class="btn btn-success">Upload sermon</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th ng-repeat="field in fields">{{field[lang]}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="sermon in sermons">
+                        <th width="30%"><a href="#/sermonupdate" ng-click="update($index)">{{sermon.title[lang]}}</a></th>
+                        <th width="10%">{{sermon.speaker[lang]}}</th>
+                        <th width="10%">{{sermon.passages[lang]}}</th>
+                        <td width="10%">{{sermon.date.sermonDate}}</td>
+                        <th width="40%">{{sermon.url.remote}}</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

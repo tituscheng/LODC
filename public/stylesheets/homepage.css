@@ -1,0 +1,126 @@
+.footer_address {
+    border-top-color: black;
+    border-top: solid 1px;
+}
+.nav {
+    float: right;
+}
+.nav-item {
+    background-color: #feca30;
+    float: left;
+    height: 100%;
+    font-size: 13px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 61.5313px;
+    width: 100px;
+}
+.logo-title {
+    font-weight: bold;
+    font-size: 34px;
+    height: 100%;
+    padding-left: 10px;
+    ;
+}
+a.logo-text:link {
+    color: black;
+    text-decoration: none;
+}
+a.logo-text:hover {
+    color: black;
+    text-decoration: none;
+}
+a.logo-text:active {
+    color: black;
+    text-decoration: none;
+}
+a.logo-text:visited {
+    color: black;
+    text-decoration: none;
+}
+.nav-border-left {
+    border-left-color: black;
+    border-left: solid 1px;
+}
+.nav-border-right {
+    border-right-color: black;
+    border-right: solid 1px;
+}
+.mission {
+    background-color: #c25138;
+    height: 100%;
+    width: 245px;
+}
+.hptitle {
+    color: #fefdfd;
+    font-size: 30px;
+}
+.hpsubtitle {
+    color: #401a12;
+    font-size: 15px;
+}
+.worship {
+    background-color: #f5b72b;
+    height: 100%;
+    float: left;
+    width: 250px;
+}
+.hp-text {
+    padding-top: 60px;
+    padding-left: 15px;
+}
+.test {
+    background-color: #f5b72b;
+}
+.intro {
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 100%;
+    padding-left: 60px;
+    padding-top: 15px;
+}
+.intro-title {
+    font-weight: bold;
+    font-size: 25px;
+}
+.intro-content {
+    font-size: 18px;
+}
+.nav-text {
+    color: #5b3116;
+    text-decoration: none;
+}
+a.nav-text:hover {
+    color: #5b3116;
+    text-decoration: none;
+}
+a.nav-text:link {
+    color: #5b3116;
+    text-decoration: none;
+}
+a.nav-text:visited {
+    color: #5b3116;
+    text-decoration: none;
+}
+a.nav-text:active {
+    color: #d6ecf6;
+    text-decoration: none;
+}
+div.nav-item:hover {
+    background-color: #f8b82a;
+}
+div.nav-item:active {
+    background-color: #0087c9;
+    color: #d6ecf6;
+}
+.fade.ng-hide {
+    transition: 0.5s linear all;
+    opacity: 0;
+}
+.ng-enter {
+    animation: scaleUp 0.5s both ease-in;
+    z-index: 8888;
+}
+.ng-leave {
+    animation: slideOutLeft 0.5s both ease-in;
+    z-index: 9999;
+}

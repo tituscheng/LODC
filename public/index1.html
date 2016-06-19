@@ -1,0 +1,47 @@
+<!DOCYTYPE html>
+<html lang="en" ng-app="churchApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Loving Opening Door Church App">
+    <meta name="author" content="Titus Cheng">
+    <title>Loving Open Door Church</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/angular-animate/angular-animate.js"></script>
+    <script src="/node_modules/angular-route/angular-route.js"></script>
+    <script src="/node_modules/angular-resource/angular-resource.js"></script>
+    <script src="javascripts/service.js"></script>
+    <script src="javascripts/home.js"></script>
+    <link rel="stylesheet" href="stylesheets/homepage.css">
+</head>
+
+<body style="padding:100px">
+    <header>
+        <div class="container" style="width:980px;" ng-controller="NavController">
+            <div class="row" style="height:63px; border-bottom: 1px solid black">
+                <div style="float:left;">
+                    <img alt="" src="https://static.wixstatic.com/media/f4f07d_5601fd1b0fcc4597b26860b4b81874a2.png/v1/fill/w_106,h_116,al_c,usm_0.66_1.00_0.01/f4f07d_5601fd1b0fcc4597b26860b4b81874a2.png" style="width: 53px; height: 58px; object-fit: cover;">
+                </div>
+                <div class="logo-title" style="float:left;">
+                    <a href="#/" class="logo-text">사랑의 열린문 교회</a>
+                </div>
+                <div class="nav">
+                    <div class="nav-item ng-class:{'nav-border-left':navitem.index > 1}" ng-repeat="navitem in navItems | orderBy:'order'"><a href="{{navitem.link}}" class="nav-text">{{navitem.lang.kr}}</a></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container" style="width:980px;">
+        <div ng-view></div>
+        <br>
+        <div class="row">
+            <footer></footer>
+        </div>
+    </div>
+
+</body>
+
+</html>

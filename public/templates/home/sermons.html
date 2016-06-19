@@ -1,0 +1,13 @@
+<div class="row" ng-controller="SermonController">
+
+    This month's sermon
+    <div class="panel panel-success" ng-repeat="sermon in sermons">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{sermon.title}}</h3>
+        </div>
+        <div class="panel-body" ng-if="sermon.medialink">
+            <!--            <iframe id="ytplayer" type="text/html" width="640" height="390" src="{{sermon.medialink}}" frameborder="0" />-->
+            <youtube code="sermon.medialink"></youtube>
+        </div>
+    </div>
+</div>

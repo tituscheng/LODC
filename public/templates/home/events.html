@@ -1,0 +1,9 @@
+<div class="row" ng-controller="ScheduleController">
+    <div ng-repeat="schedule in schedules">
+        <h3><u>{{schedule.day}}</u></h3>
+        <ul>
+            <li ng-repeat="activity in schedule.activities">{{activity.name}} ~ {{activity.time}}</li>
+        </ul>
+    </div>
+
+</div>

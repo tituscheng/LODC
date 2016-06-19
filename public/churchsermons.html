@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Blessing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- LOAD CSS FILES -->
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script type="text/javascript" src="javascripts/custom/index.js"></script>
+</head>
+
+<body ng-app="mainApp">
+    <div id="preloader"></div>
+    <div id="wrapper">
+        <!-- header begin -->
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <!-- logo begin -->
+                        <lodc-logo></lodc-logo>
+                        <!-- logo close -->
+                    </div>
+
+                    <div class="col-md-9">
+                        <!-- mainmenu begin -->
+                        <main-menu></main-menu>
+
+                        <social-links></social-links>
+                        <!-- mainmenu close -->
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </header>
+        <!-- header close -->
+
+        <!-- subheader begin -->
+        <section id="subheader" data-speed="2" data-type="background">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <h1>Sermons</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- subheader close -->
+
+        <div class="clearfix"></div>
+
+        <!-- content begin -->
+        <div id="content">
+            <div class="container">
+                <div class="row" ng-controller="SermonListController">
+                    <div class="col-md-10 col-md-offset-1">
+                        <sermon title="sermon.title" author="sermon.author" date="sermon.date" img="sermon.img" ng-repeat="sermon in sermons"></sermon>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- content close -->
+
+        <!-- footer begin -->
+        <footer>
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        &copy; Copyiright 2015 - Blessing by SatriaThemes
+                    </div>
+                    <div class="col-md-6">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- footer close -->
+    </div>
+
+    <!-- LOAD JS FILES -->
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/jquery.isotope.min.js"></script>
+    <script src="javascripts/jquery.prettyPhoto.js"></script>
+    <script src="javascripts/easing.js"></script>
+    <script src="javascripts/jquery.ui.totop.js"></script>
+    <script src="javascripts/selectnav.js"></script>
+    <script src="javascripts/ender.js"></script>
+    <script src="javascripts/responsiveslides.min.js"></script>
+    <script src="javascripts/owl.carousel.js"></script>
+    <script src="javascripts/jquery.fitvids.js"></script>
+    <script src="javascripts/jquery.plugin.js"></script>
+    <script src="javascripts/jquery.countdown.js"></script>
+    <script src="javascripts/countdown-custom.js"></script>
+    <script src="javascripts/moment.min.js"></script>
+    <script src="javascripts/fullcalendar.min.js"></script>
+
+    <script src="javascripts/wow.min.js"></script>
+    <script src="javascripts/custom.js"></script>
+
+    <!-- SLIDER REVOLUTION SCRIPTS  -->
+    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="javascripts/rev-setting-1.js"></script>
+
+</body>
+
+</html>
